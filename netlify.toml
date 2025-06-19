@@ -1,0 +1,12 @@
+[build]
+  # si tu package.json está aquí mismo no hace falta base
+  # base    = ""
+  functions = "netlify/functions"
+  # como no tienes front, publica la carpeta vacía o la misma raíz
+  publish   = "public" 
+
+[[redirects]]
+  from    = "/api/*"
+  to      = "/.netlify/functions/server/:splat"
+  status  = 200
+  force   = true
